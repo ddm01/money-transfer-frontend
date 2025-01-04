@@ -1,0 +1,17 @@
+# React Native
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.expo/
+.expo-shared/
+.idea/
+*.lock
+.vscode/
+android/app/debug.keystore
+.gradle/
+*.iml
+ios/Pods/
+*.xcuserdatad
+*.xcuserdata
+ 
