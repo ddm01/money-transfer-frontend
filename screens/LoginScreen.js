@@ -21,7 +21,7 @@ const LoginScreen = ({ navigation }) => {
     }
 
     try {
-      const response = await fetch('http://192.168.20.28:8000/login', {
+      const response = await fetch('https://money-transfer-backend-ddu8.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
