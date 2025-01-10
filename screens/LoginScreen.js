@@ -7,6 +7,7 @@ import {
   Button,
   StyleSheet,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
@@ -60,6 +61,11 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword(text)}
       />
       <Button title="Login" onPress={handleLogin} />
+      
+      {/* Register Button */}
+      <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')} style={styles.registerButton}>
+        <Text style={styles.registerText}>Don’t have an account? Register</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -85,6 +91,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginBottom: 20,
     backgroundColor: '#fff',
+  },
+  registerButton: {
+    marginTop: 20,
+    alignSelf: 'center',
+  },
+  registerText: {
+    fontSize: 16,
+    color: '#007BFF',
   },
 });
 
