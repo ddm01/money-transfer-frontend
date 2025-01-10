@@ -7,7 +7,6 @@ import {
   Button,
   StyleSheet,
   Alert,
-  TouchableOpacity,
 } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
@@ -21,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
     }
 
     try {
-      const response = await fetch('https://money-transfer-backend-ddu8.onrender.com', {
+      const response = await fetch('https://money-transfer-backend-ddu8.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,9 +60,6 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword(text)}
       />
       <Button title="Login" onPress={handleLogin} />
-      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-        <Text style={styles.link}>Don't have an account? Register</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -89,11 +85,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginBottom: 20,
     backgroundColor: '#fff',
-  },
-  link: {
-    color: 'blue',
-    textAlign: 'center',
-    marginTop: 10,
   },
 });
 
